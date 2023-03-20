@@ -1209,3 +1209,484 @@ Processing by RestaurantPizzasController#create as */*
 Completed 200 OK in 23ms (Views: 0.6ms | ActiveRecord: 9.3ms | Allocations: 3609)
 
 
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-03-19 10:25:34 +0300
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>37, "pizza_id"=>10, "restaurant_id"=>2, "restaurant_pizza"=>{"price"=>37, "pizza_id"=>10, "restaurant_id"=>2}}
+[31mUnpermitted parameter: :restaurant_pizza. Context: { controller: RestaurantPizzasController, action: create, request: #<ActionDispatch::Request:0x00007fc0046bf8c0>, params: {"price"=>37, "pizza_id"=>10, "restaurant_id"=>2, "controller"=>"restaurant_pizzas", "action"=>"create", "restaurant_pizza"=>{"price"=>37, "pizza_id"=>10, "restaurant_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mPizza Load (0.4ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 40ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 18003)
+
+
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-03-19 10:25:57 +0300
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>22, "pizza_id"=>10, "restaurant_id"=>2, "restaurant_pizza"=>{"price"=>22, "pizza_id"=>10, "restaurant_id"=>2}}
+[31mUnpermitted parameter: :restaurant_pizza. Context: { controller: RestaurantPizzasController, action: create, request: #<ActionDispatch::Request:0x00007fc004238f90>, params: {"price"=>22, "pizza_id"=>10, "restaurant_id"=>2, "controller"=>"restaurant_pizzas", "action"=>"create", "restaurant_pizza"=>{"price"=>22, "pizza_id"=>10, "restaurant_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mRestaurantpizza Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurantpizzas" ("price", "pizza_id", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 22], ["pizza_id", 10], ["restaurant_id", 2], ["created_at", "2023-03-19 07:25:57.310721"], ["updated_at", "2023-03-19 07:25:57.310721"]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 5.6ms | Allocations: 3668)
+
+
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-03-19 10:26:03 +0300
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>22, "pizza_id"=>19, "restaurant_id"=>2, "restaurant_pizza"=>{"price"=>22, "pizza_id"=>19, "restaurant_id"=>2}}
+[31mUnpermitted parameter: :restaurant_pizza. Context: { controller: RestaurantPizzasController, action: create, request: #<ActionDispatch::Request:0x00007fc0041332d0>, params: {"price"=>22, "pizza_id"=>19, "restaurant_id"=>2, "controller"=>"restaurant_pizzas", "action"=>"create", "restaurant_pizza"=>{"price"=>22, "pizza_id"=>19, "restaurant_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 13ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 3643)
+
+
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-03-19 10:26:09 +0300
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>22, "pizza_id"=>10, "restaurant_id"=>2, "restaurant_pizza"=>{"price"=>22, "pizza_id"=>10, "restaurant_id"=>2}}
+[31mUnpermitted parameter: :restaurant_pizza. Context: { controller: RestaurantPizzasController, action: create, request: #<ActionDispatch::Request:0x00007fc004035900>, params: {"price"=>22, "pizza_id"=>10, "restaurant_id"=>2, "controller"=>"restaurant_pizzas", "action"=>"create", "restaurant_pizza"=>{"price"=>22, "pizza_id"=>10, "restaurant_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mRestaurantpizza Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurantpizzas" ("price", "pizza_id", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 22], ["pizza_id", 10], ["restaurant_id", 2], ["created_at", "2023-03-19 07:26:09.631538"], ["updated_at", "2023-03-19 07:26:09.631538"]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:4:in `create'
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 9.1ms | Allocations: 3632)
+
+
+Started GET "/pizzas" for ::1 at 2023-03-20 10:20:58 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (0.3ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.9ms | Allocations: 5134)
+
+
+Started GET "/restaurants" for ::1 at 2023-03-20 10:21:08 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...taurant.includes(:pizza)find_by(id: params[:id])
+...                        ^~~~~~~
+):
+  
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/restaurants" for ::1 at 2023-03-20 10:22:21 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...taurant.includes(:pizza)find_by(id: params[:id])
+...                        ^~~~~~~
+):
+  
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/restaurants" for ::1 at 2023-03-20 10:22:23 +0300
+  
+ActionController::RoutingError (uninitialized constant RestaurantsController
+Did you mean?  RestaurantPizzasController):
+  
+Started GET "/restaurants" for ::1 at 2023-03-20 10:22:45 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 4969)
+
+
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:22:51 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms | Allocations: 3251)
+
+
+  
+NoMethodError (undefined method `restaurant' for #<RestaurantsController:0x00000000032e60>
+Did you mean?  restaurant_url):
+  
+app/controllers/restaurants_controller.rb:10:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:23:38 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.2ms | Allocations: 7282)
+
+
+  
+NoMethodError (undefined method `restaurant' for #<RestaurantsController:0x00000000036d58>
+Did you mean?  restaurant_url):
+  
+app/controllers/restaurants_controller.rb:10:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:23:42 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 2780)
+
+
+  
+NoMethodError (undefined method `restaurant' for #<RestaurantsController:0x00000000037078>
+Did you mean?  restaurant_url):
+  
+app/controllers/restaurants_controller.rb:10:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:23:48 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.2ms | Allocations: 7310)
+
+
+  
+NoMethodError (undefined method `restaurant' for #<RestaurantsController:0x0000000003afe8>
+Did you mean?  restaurant_url):
+  
+app/controllers/restaurants_controller.rb:10:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:24:20 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...taurant.includes(:pizza)find_by(id: params[:id])
+...                        ^~~~~~~
+):
+  
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:24:27 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...aurant.includes(:pizzas)find_by(id: params[:id])
+...                        ^~~~~~~
+):
+  
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:24:36 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...taurant.includes(:pizza)find_by(id: params[:id])
+...                        ^~~~~~~
+):
+  
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:25:35 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...staurant.include(:pizza)find_by(id: params[:id])
+...                        ^~~~~~~
+):
+  
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:25:45 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+...taurant.includes(:pizza)find_by(id: params[:id])
+...                        ^~~~~~~
+):
+  
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/restaurants_controller.rb:8: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:27:51 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms | Allocations: 6116)
+
+
+  
+ActiveRecord::AssociationNotFoundError (Association named 'pizza' was not found on Restaurant; perhaps you misspelled it?
+Did you mean?  pizzas):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:28:13 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.6ms | Allocations: 8736)
+
+
+  
+NameError (Rails couldn't find a valid model for RestaurantPizza association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:28:21 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms | Allocations: 6379)
+
+
+  
+NameError (Rails couldn't find a valid model for RestaurantPizza association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:28:25 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms | Allocations: 2212)
+
+
+  
+NameError (Rails couldn't find a valid model for RestaurantPizza association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:28:32 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.9ms | Allocations: 5209)
+
+
+  
+ActiveRecord::AssociationNotFoundError (Association named 'pizza' was not found on Restaurant; perhaps you misspelled it?
+Did you mean?  pizzas):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:28:47 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.3ms | Allocations: 6352)
+
+
+  
+NameError (Rails couldn't find a valid model for RestaurantPizza association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:28:53 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.6ms | Allocations: 5262)
+
+
+  
+ActiveRecord::AssociationNotFoundError (Association named 'pizza' was not found on Restaurant; perhaps you misspelled it?
+Did you mean?  pizzas):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:35:52 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms | Allocations: 5973)
+
+
+  
+NameError (Rails couldn't find a valid model for RestaurantPizza association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:37:24 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms | Allocations: 5419)
+
+
+  
+ActiveRecord::AssociationNotFoundError (Association named 'pizzas' was not found on Restaurant; perhaps you misspelled it?
+Did you mean?  pizza):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:38:13 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 2.5ms | Allocations: 13490)
+
+
+  
+NoMethodError (undefined method `pizzas' for #<Restaurant:0x00007fc004158738>
+Did you mean?  pizza
+               pizza=):
+  
+app/controllers/restaurants_controller.rb:13:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:38:21 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms | Allocations: 5396)
+
+
+  
+ActiveRecord::AssociationNotFoundError (Association named 'pizzas' was not found on Restaurant; perhaps you misspelled it?
+Did you mean?  pizza):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:42:39 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.6ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."restaurant_id" = ?[0m  [["restaurant_id", "1"]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.6ms | Allocations: 10967)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: pizzas.restaurant_id):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:44:09 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.5ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  ↳ app/controllers/restaurants_controller.rb:13:in `map'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.5ms | Allocations: 10782)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: pizzas.restaurant_id):
+  
+app/controllers/restaurants_controller.rb:13:in `map'
+app/controllers/restaurants_controller.rb:13:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 10:45:02 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms | Allocations: 7553)
+
+
+  
+NoMethodError (undefined method `map' for 1:Integer
+Did you mean?  tap):
+  
+app/controllers/restaurants_controller.rb:13:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 21:26:09 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.3ms | Allocations: 8725)
+
+
+  
+NoMethodError (undefined method `map' for #<Restaurant:0x00007fc008967358>
+Did you mean?  tap):
+  
+app/controllers/restaurants_controller.rb:13:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 21:26:22 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.5ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  ↳ app/controllers/restaurants_controller.rb:13:in `map'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.6ms | Allocations: 10826)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: pizzas.restaurant_id):
+  
+app/controllers/restaurants_controller.rb:13:in `map'
+app/controllers/restaurants_controller.rb:13:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 21:26:30 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms | Allocations: 9810)
+
+
+  
+NoMethodError (undefined method `map' for nil:NilClass):
+  
+app/controllers/restaurants_controller.rb:13:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 21:26:59 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:19: syntax error, unexpected `end', expecting '}'
+      end
+      ^~~
+):
+  
+app/controllers/restaurants_controller.rb:19: syntax error, unexpected `end', expecting '}'
+app/controllers/restaurants_controller.rb:19: syntax error, unexpected `end', expecting '}'
+app/controllers/restaurants_controller.rb:19: syntax error, unexpected `end', expecting '}'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 21:27:17 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:19: syntax error, unexpected `end', expecting '}'
+      end
+      ^~~
+):
+  
+app/controllers/restaurants_controller.rb:19: syntax error, unexpected `end', expecting '}'
+app/controllers/restaurants_controller.rb:19: syntax error, unexpected `end', expecting '}'
+app/controllers/restaurants_controller.rb:19: syntax error, unexpected `end', expecting '}'
+Started GET "/restaurants/1" for ::1 at 2023-03-20 21:27:28 +0300
+  
+SyntaxError (/home/user/pizza-hut/app/controllers/restaurants_controller.rb:24: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/restaurants_controller.rb:24: syntax error, unexpected `end', expecting end-of-input
+app/controllers/restaurants_controller.rb:24: syntax error, unexpected `end', expecting end-of-input
+app/controllers/restaurants_controller.rb:24: syntax error, unexpected `end', expecting end-of-input
+Started GET "/restaurants/1" for ::1 at 2023-03-20 21:27:35 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.2ms | Allocations: 8611)
+
+
+  
+NameError (undefined local variable or method `pizza' for #<RestaurantsController:0x000000000a1360>):
+  
+app/controllers/restaurants_controller.rb:15:in `show'
+Started GET "/restaurants" for ::1 at 2023-03-20 21:27:47 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 850)
+
+
+Started GET "/pizzas" for ::1 at 2023-03-20 21:27:57 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (0.5ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 12.6ms | ActiveRecord: 2.0ms | Allocations: 5253)
+
+
