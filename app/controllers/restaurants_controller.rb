@@ -5,9 +5,9 @@ def index
     render json: restaurant, only: [:id, :name, :address]
 end
 def show 
-    restaurant = Restaurant.find_by(id: params[:id])
+    restaurant = Restaurant.includes(:pizza).find_by(id: params[:id])
     if restaurant 
-        render json: restaurant, only: [:id, :name, :address]
+        render json: restaurant.to_json(include: :pizza)
     else
         render json: {error: "Restaurant not found"}
     end

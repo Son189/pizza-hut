@@ -1690,3 +1690,155 @@ Processing by PizzasController#index as HTML
 Completed 200 OK in 35ms (Views: 12.6ms | ActiveRecord: 2.0ms | Allocations: 5253)
 
 
+Started GET "/restaurants" for ::1 at 2023-03-20 21:55:52 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 5797)
+
+
+Started GET "/restaurants/2" for ::1 at 2023-03-20 21:55:57 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1077)
+
+
+Started GET "/restaurants" for ::1 at 2023-03-20 21:56:03 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 820)
+
+
+Started GET "/restaurants/1" for ::1 at 2023-03-21 08:40:04 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.8ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."restaurant_id" = ?[0m  [["restaurant_id", "1"]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 2.2ms | Allocations: 10837)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: pizzas.restaurant_id):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-21 08:40:36 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (7.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."restaurant_id" = ?[0m  [["restaurant_id", "1"]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 8.6ms | Allocations: 10871)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: pizzas.restaurant_id):
+  
+app/controllers/restaurants_controller.rb:8:in `show'
+Started GET "/restaurants/1" for ::1 at 2023-03-21 08:40:43 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 10379)
+
+
+Started GET "/restaurants/2" for ::1 at 2023-03-21 08:40:56 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.4ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1461)
+
+
+Started GET "/restaurants/2" for ::1 at 2023-03-21 08:41:14 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.8ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."restaurant_id" = ?[0m  [["restaurant_id", 2]]
+  ↳ app/controllers/restaurants_controller.rb:10:in `show'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.2ms | Allocations: 11949)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: pizzas.restaurant_id):
+  
+app/controllers/restaurants_controller.rb:10:in `show'
+Started GET "/restaurants/2" for ::1 at 2023-03-21 08:41:22 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 200 OK in 42ms (Views: 0.7ms | ActiveRecord: 3.8ms | Allocations: 10310)
+
+
+Started GET "/restaurants/2" for ::1 at 2023-03-21 08:45:07 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 10221)
+
+
+Started GET "/restaurants/2" for ::1 at 2023-03-21 08:45:09 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.5ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 1462)
+
+
+Started GET "/restaurants/3" for ::1 at 2023-03-21 08:45:15 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1462)
+
+
+Started GET "/restaurants/3" for ::1 at 2023-03-21 08:46:13 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.8ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."restaurant_id" = ?[0m  [["restaurant_id", 3]]
+  ↳ app/controllers/restaurants_controller.rb:10:in `show'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.7ms | Allocations: 11739)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: pizzas.restaurant_id):
+  
+app/controllers/restaurants_controller.rb:10:in `show'
+Started GET "/restaurants/3" for ::1 at 2023-03-21 08:46:31 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/restaurants_controller.rb:8:in `show'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 10313)
+
+
